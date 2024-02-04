@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root{
+--kusu:auto;
+            --boxcolor:blue;
+            --bordercolor:red;
+
+        }
+        div{
+            margin: var(--kusu);
+            height: 100px;
+            width: 100px;
+            background: var(--boxcolor);
+            transition: 0.75s ease-in-out;
+           
+        }
+        div:hover{
+            box-shadow: 4px 4px 4px 4px  var(--bordercolor);
+        }
+    </style>
+</head>
+<body>
+
+    <div id="kusu">
+
+    </div>
+    <label for="" id="bisu"> </label>
+</body>
+<script>
+    let a = document.getElementById("kusu");
+    a.addEventListener("click",function(){
+        document.getElementById("bisu").innerHTML="box was hovered "
+    })
+</script>
+</html>
